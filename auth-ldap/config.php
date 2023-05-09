@@ -106,7 +106,13 @@ class LdapConfig extends PluginConfig {
                     '2307' => 'Posix Account (rfc 2307)',
                 ),
             )),
-
+            'use-ldaps' => new BooleanField(array(
+                'label' => $__('use LDAPS'),
+                'default' => false,
+                'configuration' => array(
+                    'desc' => $__('Force comunication ower Secure LDAP protocol')
+                )
+            )),
             'auth' => new SectionBreakField(array(
                 'label' => $__('Authentication Modes'),
                 'hint' => $__('Authentication modes for clients and staff
